@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "896015625748",
+    "project_id": "carlife-20f73",
+    "storage_bucket": "carlife-20f73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896015625748:android:cb55b7c91298e05ad90101",
+        "android_client_info": {
+          "package_name": "com.example.carlife"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC7jPBVPnzAZfr69otzpz4rNuBwwAikno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

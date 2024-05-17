@@ -1,12 +1,12 @@
-package com.example.glamify.data
+package com.example.carlife.data
 
 import android.app.ProgressDialog
 import android.content.Context
 import android.widget.Toast
 import androidx.navigation.NavHostController
-import com.example.glamify.models.User
-import com.example.glamify.navigation.HOME_URL
-import com.example.glamify.navigation.LOGIN_URL
+import com.example.carlife.models.User
+import com.example.carlife.navigation.HOME_URL
+import com.example.carlife.navigation.LOGIN_URL
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 

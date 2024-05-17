@@ -1,4 +1,4 @@
-package com.example.glamify.ui.theme.screens.signup
+package com.example.carlife.ui.theme.screens.signup
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -42,11 +42,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.glamify.data.AuthViewModel
-import com.example.glamify.navigation.LOGIN_URL
-import com.example.glamify.ui.theme.WazitoECommerceTheme
-import com.example.glamify.ui.theme.main_green
-import com.example.glamify.ui.theme.secondary_blue
+import com.example.carlife.data.AuthViewModel
+import com.example.carlife.navigation.LOGIN_URL
+import com.example.carlife.ui.theme.WazitoECommerceTheme
+import com.example.carlife.ui.theme.main_green
+import com.example.carlife.ui.theme.secondary_blue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,7 +54,7 @@ fun SignupScreen(navController:NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White),
+            .background(Color.Black),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {

@@ -1,4 +1,4 @@
-package com.example.glamify.models
+package com.example.carlife.models
 
 class Product {
     var name:String = ""

@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.example.glamify.ui.theme.screens.products
+package com.example.carlife.ui.theme.screens.products
 
 import android.content.Context
 import android.net.Uri
@@ -61,16 +61,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.glamify.R
-import com.example.glamify.data.ProductViewModel
-import com.example.glamify.navigation.ABOUT_URL
-import com.example.glamify.navigation.HOME_URL
-import com.example.glamify.navigation.VIEW_SHOES_URL
-import com.example.glamify.ui.theme.WazitoECommerceTheme
-import com.example.glamify.ui.theme.back_green
-import com.example.glamify.ui.theme.card_green
-import com.example.glamify.ui.theme.main_green
-import com.example.glamify.ui.theme.secondary_blue
+import com.example.carlife.R
+import com.example.carlife.data.ProductViewModel
+import com.example.carlife.navigation.ABOUT_URL
+import com.example.carlife.navigation.HOME_URL
+import com.example.carlife.navigation.VIEW_SHOES_URL
+import com.example.carlife.ui.theme.WazitoECommerceTheme
+import com.example.carlife.ui.theme.card_green
+import com.example.carlife.ui.theme.home_black
+import com.example.carlife.ui.theme.main_green
+import com.example.carlife.ui.theme.secondary_blue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -78,7 +78,7 @@ fun AddShoesScreen(navController:NavHostController){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(back_green)
+            .background(home_black)
             .verticalScroll(rememberScrollState())
     ) {
         LocalContext.current
@@ -138,11 +138,11 @@ fun AddShoesScreen(navController:NavHostController){
                     .size(70.dp),
                 shape = RoundedCornerShape(50),
                 colors = CardDefaults.cardColors(
-                    containerColor = card_green
+                    containerColor = home_black
                 )
             ){
                 Image(
-                    painter = painterResource(id = R.drawable.glamifysell),
+                    painter = painterResource(id = R.drawable.c1r),
                     contentDescription = "top icon",
                     contentScale = ContentScale.FillBounds,
                     modifier = Modifier
@@ -155,7 +155,7 @@ fun AddShoesScreen(navController:NavHostController){
         // end of icon row
         Spacer(modifier = Modifier.height(7.dp))
         Text(
-            text = "Sell Shoes",
+            text = "Sell Car$",
             fontSize = 27.sp,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center,
@@ -175,7 +175,7 @@ fun AddShoesScreen(navController:NavHostController){
                 colors = ButtonDefaults.buttonColors(main_green)
             ) {
                 Text(
-                    text = "Add Shoe",
+                    text = "Add Car",
                     fontSize = 16.sp
                 )
             }
@@ -185,7 +185,7 @@ fun AddShoesScreen(navController:NavHostController){
                 colors = ButtonDefaults.buttonColors(card_green),
             ) {
                 Text(
-                    text = "View Shoes",
+                    text = "View Cars",
                     color = secondary_blue,
                     fontSize = 16.sp
                 )
@@ -205,7 +205,7 @@ fun AddShoesScreen(navController:NavHostController){
         OutlinedTextField(
             value = shoeName,
             onValueChange = { shoeName = it },
-            placeholder = { Text(text="eg. Nike,Cap") },
+            placeholder = { Text(text="eg. Lexus,V8") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp),
@@ -224,7 +224,7 @@ fun AddShoesScreen(navController:NavHostController){
                 focusedLabelColor = secondary_blue,
                 unfocusedLabelColor = main_green,
             ),
-            label = { Text(text = "Shoe Name") }
+            label = { Text(text = "Car Name") }
         )
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -232,7 +232,7 @@ fun AddShoesScreen(navController:NavHostController){
         OutlinedTextField(
             value = shoeDescription,
             onValueChange = { shoeDescription = it },
-            placeholder = { Text(text="eg. Fashionable wear....") },
+            placeholder = { Text(text="eg. Sports Car....") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp),
@@ -251,7 +251,7 @@ fun AddShoesScreen(navController:NavHostController){
                 focusedLabelColor = secondary_blue,
                 unfocusedLabelColor = main_green,
             ),
-            label = { Text(text = "Shoe Description") }
+            label = { Text(text = "Car Description") }
         )
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -259,7 +259,7 @@ fun AddShoesScreen(navController:NavHostController){
         OutlinedTextField(
             value = shoePrice,
             onValueChange = { shoePrice = it },
-            placeholder = { Text(text="eg. ksh.5000") },
+            placeholder = { Text(text="eg. ksh.5000000") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp),
@@ -278,7 +278,7 @@ fun AddShoesScreen(navController:NavHostController){
                 focusedLabelColor = secondary_blue,
                 unfocusedLabelColor = main_green,
             ),
-            label = { Text(text = "Shoe Price (Ksh.)") }
+            label = { Text(text = "Car Price (Ksh.)") }
         )
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -394,7 +394,7 @@ fun ImagePicker(modifier: Modifier = Modifier, context: Context,navController: N
                 border = BorderStroke(1.dp, main_green)
             ) {
                 Text(
-                    text = "Select Shoe Image",
+                    text = "Select Car Image",
                     color = secondary_blue,
                     fontSize = 18.sp
                 )

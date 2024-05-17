@@ -1,4 +1,4 @@
-package com.example.glamify.navigation
+package com.example.carlife.navigation
 
 const val HOME_URL = "home"
 const val SIGNUP_URL = "signup"

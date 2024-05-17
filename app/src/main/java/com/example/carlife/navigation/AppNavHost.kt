@@ -1,4 +1,4 @@
-package com.example.glamify.navigation
+package com.example.carlife.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -6,15 +6,15 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.glamify.ui.theme.screens.about.AboutScreen
-import com.example.glamify.ui.theme.screens.home.HomeScreen
-import com.example.glamify.ui.theme.screens.login.LoginScreen
-import com.example.glamify.ui.theme.screens.menu.MenuScreen
-import com.example.glamify.ui.theme.screens.products.AddShoesScreen
-import com.example.glamify.ui.theme.screens.products.UpdateShoeScreen
-import com.example.glamify.ui.theme.screens.products.ViewShoeScreen
-import com.example.glamify.ui.theme.screens.products.ViewShoesScreen
-import com.example.glamify.ui.theme.screens.signup.SignupScreen
+import com.example.carlife.ui.theme.screens.home.HomeScreen
+import com.example.carlife.ui.theme.screens.login.LoginScreen
+import com.example.carlife.ui.theme.screens.products.AddShoesScreen
+import com.example.carlife.ui.theme.screens.products.UpdateShoeScreen
+import com.example.carlife.ui.theme.screens.products.ViewCarsScreen
+import com.example.carlife.ui.theme.screens.products.ViewShoesScreen
+import com.example.carlife.ui.theme.screens.signup.SignupScreen
+import com.example.carlife.ui.theme.screens.about.AboutScreen
+import com.example.carlife.ui.theme.screens.menu.MenuScreen
 
 @Composable
 fun AppNavHost(
@@ -49,7 +49,7 @@ fun AppNavHost(
             AboutScreen(navController = navController)
         }
         composable(VIEW_USER_SHOE){
-            ViewShoeScreen(navController = navController)
+            ViewCarsScreen(navController = navController)
         }
         composable(ROUTE_UPDATE_SHOES){
             UpdateShoeScreen(navController = navController)

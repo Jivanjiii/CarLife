@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.example.glamify.ui.theme.screens.products
+package com.example.carlife.ui.theme.screens.products
 
 import android.content.Context
 import android.net.Uri
@@ -61,16 +61,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.glamify.R
-import com.example.glamify.data.ProductViewModel
-import com.example.glamify.navigation.ABOUT_URL
-import com.example.glamify.navigation.HOME_URL
-import com.example.glamify.navigation.VIEW_SHOES_URL
-import com.example.glamify.ui.theme.WazitoECommerceTheme
-import com.example.glamify.ui.theme.back_green
-import com.example.glamify.ui.theme.card_green
-import com.example.glamify.ui.theme.main_green
-import com.example.glamify.ui.theme.secondary_blue
+import com.example.carlife.R
+import com.example.carlife.data.ProductViewModel
+import com.example.carlife.navigation.ABOUT_URL
+import com.example.carlife.navigation.HOME_URL
+import com.example.carlife.navigation.VIEW_SHOES_URL
+import com.example.carlife.ui.theme.WazitoECommerceTheme
+import com.example.carlife.ui.theme.back_green
+import com.example.carlife.ui.theme.card_green
+import com.example.carlife.ui.theme.home_black
+import com.example.carlife.ui.theme.main_green
+import com.example.carlife.ui.theme.secondary_blue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -78,7 +79,7 @@ fun UpdateShoeScreen(navController: NavHostController){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(back_green)
+            .background(home_black)
             .verticalScroll(rememberScrollState())
     ) {
         LocalContext.current
@@ -139,11 +140,11 @@ fun UpdateShoeScreen(navController: NavHostController){
                     .size(70.dp),
                 shape = RoundedCornerShape(50),
                 colors = CardDefaults.cardColors(
-                    containerColor = card_green
+                    containerColor = home_black
                 )
             ){
                 Image(
-                    painter = painterResource(id = R.drawable.glamifysell),
+                    painter = painterResource(id = R.drawable.c1r),
                     contentDescription = "top icon",
                     contentScale = ContentScale.FillBounds,
                     modifier = Modifier
@@ -156,7 +157,7 @@ fun UpdateShoeScreen(navController: NavHostController){
         // end of icon row
         Spacer(modifier = Modifier.height(7.dp))
         Text(
-            text = "Update Shoe",
+            text = "Update Car",
             fontSize = 27.sp,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center,
@@ -176,7 +177,7 @@ fun UpdateShoeScreen(navController: NavHostController){
                 colors = ButtonDefaults.buttonColors(main_green)
             ) {
                 Text(
-                    text = "Update Shoe",
+                    text = "Update Car",
                     fontSize = 16.sp
                 )
             }
@@ -186,7 +187,7 @@ fun UpdateShoeScreen(navController: NavHostController){
                 colors = ButtonDefaults.buttonColors(card_green),
             ) {
                 Text(
-                    text = "View Shoes",
+                    text = "View Cars",
                     color = secondary_blue,
                     fontSize = 16.sp
                 )
@@ -225,7 +226,7 @@ fun UpdateShoeScreen(navController: NavHostController){
                 focusedLabelColor = secondary_blue,
                 unfocusedLabelColor = main_green,
             ),
-            label = { Text(text = "Shoe Name") }
+            label = { Text(text = "Car Name") }
         )
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -233,7 +234,7 @@ fun UpdateShoeScreen(navController: NavHostController){
         OutlinedTextField(
             value = shoeDescription,
             onValueChange = { shoeDescription = it },
-            placeholder = { Text(text="eg. Fashionable Wear...") },
+            placeholder = { Text(text="eg. Sports Car...") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp),
@@ -252,7 +253,7 @@ fun UpdateShoeScreen(navController: NavHostController){
                 focusedLabelColor = secondary_blue,
                 unfocusedLabelColor = main_green,
             ),
-            label = { Text(text = "Shoe Description") }
+            label = { Text(text = "Car Description") }
         )
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -260,7 +261,7 @@ fun UpdateShoeScreen(navController: NavHostController){
         OutlinedTextField(
             value = shoePrice,
             onValueChange = { shoePrice = it },
-            placeholder = { Text(text="eg. ksh.5.000") },
+            placeholder = { Text(text="eg. ksh.5000000") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp),
@@ -333,7 +334,7 @@ fun UpdateShoeScreen(navController: NavHostController){
                 focusedLabelColor = secondary_blue,
                 unfocusedLabelColor = main_green,
             ),
-            label = { Text(text = "Shoe Location") }
+            label = { Text(text = "Car Location") }
         )
 
         Spacer(modifier = Modifier.height(20.dp))

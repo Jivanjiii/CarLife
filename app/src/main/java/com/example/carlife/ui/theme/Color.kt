@@ -1,4 +1,4 @@
-package com.example.glamify.ui.theme
+package com.example.carlife.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
@@ -15,3 +15,4 @@ val secondary_blue = Color(0xFA0133AF)
 val main_green = Color(0xFF971111)
 val card_green = Color(0xFFFFEB3B)
 val home_black = Color(0xFA000000)
+val home_green_main = Color(0xFFFF5722)

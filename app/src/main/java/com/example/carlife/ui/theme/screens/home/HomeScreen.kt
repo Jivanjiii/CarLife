@@ -1,5 +1,6 @@
-package com.example.glamify.ui.theme.screens.home
+package com.example.carlife.ui.theme.screens.home
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -37,23 +38,26 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.glamify.R
-import com.example.glamify.navigation.ABOUT_URL
-import com.example.glamify.navigation.ADD_SHOES_URL
-import com.example.glamify.navigation.MORE_URL
-import com.example.glamify.navigation.VIEW_USER_SHOE
-import com.example.glamify.ui.theme.WazitoECommerceTheme
-import com.example.glamify.ui.theme.main_green
+import com.example.carlife.R
+import com.example.carlife.R.drawable.glamifybuy
+import com.example.carlife.R.drawable.supra
+import com.example.carlife.navigation.ABOUT_URL
+import com.example.carlife.navigation.ADD_SHOES_URL
+import com.example.carlife.navigation.MORE_URL
+import com.example.carlife.navigation.VIEW_USER_SHOE
+import com.example.carlife.ui.theme.WazitoECommerceTheme
+import com.example.carlife.ui.theme.main_green
 
+@SuppressLint("SuspiciousIndentation")
 @Composable
 fun HomeScreen(navController:NavHostController){
-    val  scrollStateVertical = rememberScrollState()
+    val scrollStateVertical = rememberScrollState()
             Column (
                 modifier = Modifier
                     .fillMaxSize()
                     .verticalScroll(scrollStateVertical)
                     .paint(
-                        painterResource(id = R.drawable.live),
+                        painterResource(id = R.drawable.speed),
                         contentScale = ContentScale.FillBounds),
                 horizontalAlignment = Alignment.CenterHorizontally
             ){
@@ -129,7 +133,7 @@ fun HomeScreen(navController:NavHostController){
                                 verticalArrangement = Arrangement.Center
                             ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.glamifybuy),
+                                    painter = painterResource(id = supra),
                                     contentDescription = null,
                                     modifier = Modifier.size(95.dp),
                                 )
@@ -137,9 +141,9 @@ fun HomeScreen(navController:NavHostController){
 
                             Spacer(modifier = Modifier.width(3.dp))
                             Text(
-                                text = "Buy Shoes",
-                                color = Color.Cyan,
-                                fontSize = 20.sp,
+                                text = "Buy cars",
+                                color = Color.Yellow,
+                                fontSize = 30.sp,
                                 fontWeight = FontWeight.Bold
                             )
                         }
@@ -175,7 +179,7 @@ fun HomeScreen(navController:NavHostController){
                                 verticalArrangement = Arrangement.Center
                             ){
                                 Image(
-                                    painter = painterResource(id = R.drawable.glamifysell),
+                                    painter = painterResource(id = R.drawable.c1r),
                                     modifier = Modifier.size(95.dp),
                                     contentDescription = null
                                 )
@@ -184,8 +188,8 @@ fun HomeScreen(navController:NavHostController){
                             Spacer(modifier = Modifier.width(3.dp))
 
                             Text(
-                                text = "Sell Shoes",
-                                color = Color.Cyan,
+                                text = "Sell Car$",
+                                color = Color.Yellow,
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -225,7 +229,7 @@ fun HomeScreen(navController:NavHostController){
                                 verticalArrangement = Arrangement.Center
                             ){
                                 Image(
-                                    painter = painterResource(id = R.drawable.glamifymenu),
+                                    painter = painterResource(id = R.drawable.men2),
                                     modifier = Modifier.size(95.dp),
                                     contentDescription = null
                                 )
@@ -235,8 +239,8 @@ fun HomeScreen(navController:NavHostController){
 
                             Text(
                                 text = "Menu",
-                                color = Color.Cyan,
-                                fontSize = 20.sp,
+                                color = Color.Yellow,
+                                fontSize = 30.sp,
                                 fontWeight = FontWeight.Bold
                             )
                         }

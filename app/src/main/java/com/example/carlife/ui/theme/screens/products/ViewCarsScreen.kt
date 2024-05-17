@@ -1,4 +1,4 @@
-package com.example.glamify.ui.theme.screens.products
+package com.example.carlife.ui.theme.screens.products
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -54,25 +54,24 @@ import androidx.compose.ui.window.Dialog
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberAsyncImagePainter
-import com.example.glamify.R
-import com.example.glamify.data.ProductViewModel
-import com.example.glamify.models.Product
-import com.example.glamify.navigation.ABOUT_URL
-import com.example.glamify.navigation.ADD_SHOES_URL
-import com.example.glamify.navigation.HOME_URL
-import com.example.glamify.ui.theme.WazitoECommerceTheme
-import com.example.glamify.ui.theme.back_green
-import com.example.glamify.ui.theme.card_green
-import com.example.glamify.ui.theme.home_black
-import com.example.glamify.ui.theme.main_green
-import com.example.glamify.ui.theme.secondary_blue
+import com.example.carlife.R
+import com.example.carlife.data.ProductViewModel
+import com.example.carlife.models.Product
+import com.example.carlife.navigation.ABOUT_URL
+import com.example.carlife.navigation.ADD_SHOES_URL
+import com.example.carlife.navigation.HOME_URL
+import com.example.carlife.ui.theme.WazitoECommerceTheme
+import com.example.carlife.ui.theme.card_green
+import com.example.carlife.ui.theme.home_black
+import com.example.carlife.ui.theme.main_green
+import com.example.carlife.ui.theme.secondary_blue
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
 fun ViewShoesScreen(navController:NavHostController) {
     Column(modifier = Modifier
         .fillMaxSize()
-        .background(back_green)
+        .background(home_black)
     ) {
 
         val context = LocalContext.current
@@ -86,7 +85,7 @@ fun ViewShoesScreen(navController:NavHostController) {
 
         Column(
             modifier = Modifier
-                .background(back_green)
+                .background(home_black)
                 .fillMaxSize(),
         ) {
 
@@ -160,7 +159,7 @@ fun ViewShoesScreen(navController:NavHostController) {
                         )
                     ){
                         Image(
-                            painter = painterResource(id = R.drawable.glamifysell),
+                            painter = painterResource(id = R.drawable.porche),
                             contentDescription = "top icon",
                             contentScale = ContentScale.FillBounds,
                             modifier = Modifier
@@ -175,7 +174,7 @@ fun ViewShoesScreen(navController:NavHostController) {
                 Spacer(modifier = Modifier.height(3.dp))
 
                 Text(
-                    text = "Sell Shoes",
+                    text = "Sell Car",
                     fontSize = 24.sp,
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center,
@@ -206,7 +205,7 @@ fun ViewShoesScreen(navController:NavHostController) {
                         colors = ButtonDefaults.buttonColors(card_green),
                     ) {
                         Text(
-                            text = "Add Shoe",
+                            text = "Add Car",
                             color = secondary_blue,
                             fontSize = 16.sp
                         )
@@ -432,12 +431,12 @@ fun ScreenWithPopup(onDismiss:() -> Unit){
                     verticalArrangement = Arrangement.Center
                 ){
                     Text(
-                        text = "Hi. Here you can view all the shoes you have ever uploaded and have the ability to delete and update the shoe details.",
+                        text = "Hi. Here you can view all the cars you have ever uploaded and have the ability to delete and update the cars details.",
                         fontSize = 17.sp,
                         color = secondary_blue
                     )
                     Text(
-                        text = "NOTE: The only shoes you'll see are the ones that YOU have posted.",
+                        text = "NOTE: The only cars you'll see are the ones that YOU have posted.",
                         fontSize = 17.sp,
                         color = secondary_blue
                     )

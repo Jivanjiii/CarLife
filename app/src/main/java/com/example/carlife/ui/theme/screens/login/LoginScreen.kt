@@ -1,4 +1,4 @@
-package com.example.glamify.ui.theme.screens.login
+package com.example.carlife.ui.theme.screens.login
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -40,10 +40,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.glamify.data.AuthViewModel
-import com.example.glamify.navigation.SIGNUP_URL
-import com.example.glamify.ui.theme.main_green
-import com.example.glamify.ui.theme.secondary_blue
+import com.example.carlife.data.AuthViewModel
+import com.example.carlife.navigation.SIGNUP_URL
+import com.example.carlife.ui.theme.main_green
+import com.example.carlife.ui.theme.secondary_blue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -52,7 +52,7 @@ fun LoginScreen(navController:NavHostController){
     Column (
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White),
+            .background(Color.Black),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         // variables used in activity
@@ -68,6 +68,7 @@ fun LoginScreen(navController:NavHostController){
                     text = "Log into Account",
                     textDecoration = TextDecoration.Underline,
                     fontSize = 30.sp,
+                    color = Color.Yellow
                 )
 
                 Spacer(modifier = Modifier.height(10.dp))
@@ -75,7 +76,7 @@ fun LoginScreen(navController:NavHostController){
                 OutlinedTextField(
                     value = email,
                     onValueChange = { email = it },
-                    placeholder = { Text(text="eg. abc@example.com") },
+                    placeholder = { Text(text="eg. xyz@example.com") },
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 20.dp),

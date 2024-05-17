@@ -1,4 +1,4 @@
-package com.example.glamify.ui.theme
+package com.example.carlife.ui.theme
 
 import android.app.Activity
 import android.os.Build

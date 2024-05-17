@@ -1,6 +1,5 @@
-package com.example.glamify.ui.theme.screens.menu
+package com.example.carlife.ui.theme.screens.menu
 
-import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -22,13 +21,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.AddCircle
-import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.ExitToApp
-import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -47,15 +42,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.glamify.R
-import com.example.glamify.data.AuthViewModel
-import com.example.glamify.navigation.ABOUT_URL
-import com.example.glamify.navigation.HOME_URL
-import com.example.glamify.navigation.LOGIN_URL
-import com.example.glamify.navigation.SIGNUP_URL
-import com.example.glamify.ui.theme.back_green
-import com.example.glamify.ui.theme.card_green
-import com.example.glamify.ui.theme.secondary_blue
+import com.example.carlife.R
+import com.example.carlife.data.AuthViewModel
+import com.example.carlife.navigation.ABOUT_URL
+import com.example.carlife.navigation.HOME_URL
+import com.example.carlife.navigation.LOGIN_URL
+import com.example.carlife.navigation.SIGNUP_URL
+import com.example.carlife.ui.theme.back_green
+import com.example.carlife.ui.theme.card_green
+import com.example.carlife.ui.theme.home_black
+import com.example.carlife.ui.theme.secondary_blue
 
 
 @Composable
@@ -64,7 +60,7 @@ fun MenuScreen(navController: NavHostController){
         modifier = Modifier
             .fillMaxSize()
             .padding(horizontal = 12.dp)
-            .background(back_green)
+            .background(home_black)
             .verticalScroll(rememberScrollState())
     ){
         val mContext = LocalContext.current
@@ -128,7 +124,7 @@ fun MenuScreen(navController: NavHostController){
                 )
             ){
                 Image(
-                    painter = painterResource(id = R.drawable.glamifymenu),
+                    painter = painterResource(id = R.drawable.men2),
                     contentDescription = "top icon",
                     contentScale = ContentScale.FillBounds,
                     modifier = Modifier

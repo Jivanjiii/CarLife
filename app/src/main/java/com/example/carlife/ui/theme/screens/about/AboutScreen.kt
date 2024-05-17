@@ -1,4 +1,4 @@
-package com.example.glamify.ui.theme.screens.about
+package com.example.carlife.ui.theme.screens.about
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -37,10 +37,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.glamify.R
-import com.example.glamify.navigation.HOME_URL
-import com.example.glamify.ui.theme.home_black
-import com.example.glamify.ui.theme.secondary_blue
+import com.example.carlife.R
+import com.example.carlife.navigation.HOME_URL
+import com.example.carlife.ui.theme.home_black
+import com.example.carlife.ui.theme.secondary_blue
 
 @Composable
 fun AboutScreen(navController: NavHostController) {
@@ -88,7 +88,7 @@ fun AboutScreen(navController: NavHostController) {
                     )
                 ){
                     Image(
-                        painter = painterResource(id = R.drawable.glamifyicon),
+                        painter = painterResource(id = R.drawable.jeff),
                         contentDescription = "top icon",
                         contentScale = ContentScale.FillBounds,
                         modifier = Modifier
@@ -111,15 +111,15 @@ fun AboutScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(5.dp))
 
             Text(
-                text = "Here at Glamify you can access a great variety off shoes available on the market",
+                text = "Here at CarLife you can access a great variety off car models available on the market",
                 fontSize = 17.sp,
-                color = Color.Yellow
+                color = Color.Green
             )
 
             Spacer(modifier = Modifier.height(5.dp))
 
             Text(
-                text = "Buy Glamify",
+                text = "Buy CarLife",
                 color = secondary_blue,
                 fontSize = 23.sp,
                 modifier = Modifier.fillMaxWidth(),
@@ -135,7 +135,7 @@ fun AboutScreen(navController: NavHostController) {
                     .padding(horizontal = 45.dp)
             ){
                 Image(
-                    painter = painterResource(id = R.drawable.buyscreen),
+                    painter = painterResource(id = R.drawable.shelby),
                     contentDescription = null,
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.FillBounds
@@ -145,17 +145,17 @@ fun AboutScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(7.dp))
 
             Text(
-                text = "You will find shoes which fellow users of Glamify are selling " +
-                        "uploaded with their quoted price and location. You can contact them through text messages " +
-                        "or call them directly to negotiate on the price and try to strike a deal.",
+                text = "Here at CarLife we allow you the customers," +
+                        "to sell you cars," +
+                        "add be able to interact with the customers",
                 fontSize = 17.sp,
-                color = Color.Yellow
+                color = Color.Green
             )
 
             Spacer(modifier = Modifier.height(12.dp))
 
             Text(
-                text = "Sell Glamify",
+                text = "Sell at CarLife",
                 color = secondary_blue,
                 fontSize = 23.sp,
                 modifier = Modifier.fillMaxWidth(),
@@ -171,7 +171,7 @@ fun AboutScreen(navController: NavHostController) {
                     .padding(horizontal = 45.dp)
             ){
                 Image(
-                    painter = painterResource(id = R.drawable.sellscreen),
+                    painter = painterResource(id = R.drawable.porche),
                     contentDescription = null,
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.FillBounds,
@@ -182,12 +182,12 @@ fun AboutScreen(navController: NavHostController) {
 
             Text(
                 text = "You will be welcomed with a form that allows you to upload your product to " +
-                        "the servers to allow buying of your shoes by other Glamify users. By clicking" +
-                        " on \"View Shoes\" button  you will be able to see " +
+                        "the servers to allow buying of your cars by other Carlife users. By clicking" +
+                        " on \"View Cars\" button  you will be able to see " +
                         "all products that you have ever uploaded with your account and allows updating and deleting" +
                         " of the same.",
                 fontSize = 17.sp,
-                color = Color.Yellow
+                color = Color.Green
             )
             Spacer(modifier = Modifier.height(12.dp))
 
@@ -220,7 +220,7 @@ fun AboutScreen(navController: NavHostController) {
             Text(
                 text = "Here you will be able to do additional tasks such as creating an account, logging into a different account and logging out",
                 fontSize = 17.sp,
-                color = Color.Yellow
+                color = Color.Green
             )
 
             Spacer(modifier = Modifier.height(12.dp))

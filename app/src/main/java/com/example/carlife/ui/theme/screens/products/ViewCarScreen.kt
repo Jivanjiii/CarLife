@@ -1,4 +1,5 @@
-package com.example.glamify.ui.theme.screens.products
+
+package com.example.carlife.ui.theme.screens.products
 
 import android.content.Intent
 import androidx.compose.foundation.Image
@@ -52,19 +53,19 @@ import androidx.core.net.toUri
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberAsyncImagePainter
-import com.example.glamify.R
-import com.example.glamify.data.ProductViewModel
-import com.example.glamify.models.Product
-import com.example.glamify.navigation.ABOUT_URL
-import com.example.glamify.navigation.HOME_URL
-import com.example.glamify.ui.theme.WazitoECommerceTheme
-import com.example.glamify.ui.theme.back_green
-import com.example.glamify.ui.theme.card_green
-import com.example.glamify.ui.theme.main_green
-import com.example.glamify.ui.theme.secondary_blue
+import com.example.carlife.R
+import com.example.carlife.data.ProductViewModel
+import com.example.carlife.models.Product
+import com.example.carlife.navigation.ABOUT_URL
+import com.example.carlife.navigation.HOME_URL
+import com.example.carlife.ui.theme.WazitoECommerceTheme
+import com.example.carlife.ui.theme.back_green
+import com.example.carlife.ui.theme.card_green
+import com.example.carlife.ui.theme.main_green
+import com.example.carlife.ui.theme.secondary_blue
 
 @Composable
-fun ViewShoeScreen(navController: NavHostController) {
+fun ViewCarsScreen(navController: NavHostController) {
     Column(modifier = Modifier
         .fillMaxSize()
         .background(back_green)
@@ -145,7 +146,7 @@ fun ViewShoeScreen(navController: NavHostController) {
                     )
                 ){
                     Image(
-                        painter = painterResource(id = R.drawable.glamifybuy),
+                        painter = painterResource(id = R.drawable.porche),
                         contentDescription = "top icon",
                         contentScale = ContentScale.FillBounds,
                         modifier = Modifier
@@ -315,7 +316,8 @@ fun ProductItems(
                                 Icon(
                                     imageVector = Icons.Default.Send,
                                     contentDescription = "Message Seller",
-                                    tint = main_green)
+                                    tint = main_green
+                                )
                                 Spacer(modifier = Modifier.width(3.dp))
                                 Text(
                                     text = "Message Seller",
@@ -361,9 +363,9 @@ fun ProductItems(
 
 @Composable
 @Preview(showBackground = true)
-fun ViewShoeScreenPreview(){
+fun ViewCarsScreenPreview(){
     WazitoECommerceTheme {
-        ViewShoeScreen(navController = rememberNavController())
+        ViewCarsScreen(navController = rememberNavController())
     }
 }
 

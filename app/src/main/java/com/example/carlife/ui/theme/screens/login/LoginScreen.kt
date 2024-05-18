@@ -76,7 +76,7 @@ fun LoginScreen(navController:NavHostController){
                 OutlinedTextField(
                     value = email,
                     onValueChange = { email = it },
-                    placeholder = { Text(text="eg. xyz@example.com") },
+                    placeholder = { Text(text="eg. abc@example.com") },
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 20.dp),
